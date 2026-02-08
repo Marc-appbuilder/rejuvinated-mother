@@ -198,6 +198,20 @@
             margin: 0 auto;
         }
 
+        /* ========== IMAGE DIVIDER ========== */
+        .course-divider-img {
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .course-divider-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
         /* ========== COURSE INCLUDES ========== */
         .course-includes {
             padding: 80px 2rem;
@@ -578,7 +592,7 @@
         }
 
         .day-card.locked .day-card-video .placeholder {
-            background: linear-gradient(135deg, #ddd5ca 0%, #cec5b8 100%);
+            background: linear-gradient(135deg, #f2d6dc 0%, #e8bec8 40%, #daa8b6 100%);
         }
 
         .day-card.locked .play-icon {
@@ -625,7 +639,7 @@
             transform: translateX(-50%);
             width: 14px;
             height: 11px;
-            border: 2px solid var(--brown-light);
+            border: 2px solid #c48a96;
             border-bottom: none;
             border-radius: 8px 8px 0 0;
         }
@@ -638,13 +652,13 @@
             transform: translateX(-50%);
             width: 20px;
             height: 15px;
-            background: var(--brown-light);
+            background: #c48a96;
             border-radius: 3px;
         }
 
         .lock-overlay span {
             font-size: 0.65rem;
-            color: var(--brown-light);
+            color: #c48a96;
             letter-spacing: 0.08em;
             text-transform: uppercase;
         }
@@ -748,6 +762,10 @@
         }
 
         @media (max-width: 768px) {
+            .course-divider-img {
+                height: 250px;
+            }
+
             .course-hero {
                 padding: 130px 1.5rem 70px;
             }
@@ -782,6 +800,10 @@
 
             .nav-logo {
                 font-size: 1.15rem;
+            }
+
+            .course-divider-img {
+                height: 200px;
             }
 
             .course-hero {
@@ -933,6 +955,11 @@
         </div>
         <div class="divider"></div>
     </section>
+
+    <!-- ========== IMAGE DIVIDER ========== -->
+    <div class="course-divider-img">
+        <img src="purple1.jpeg" alt="Purple sky">
+    </div>
 
     <!-- ========== WHAT'S INCLUDED ========== -->
     <section class="course-includes">
