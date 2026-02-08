@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Natal Rejuvenation Course | Rejuvinated Mother</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cream: #fffcf4;
+            --cream-dark: #f5f0e6;
+            --brown: #8e5438;
+            --brown-dark: #6b3d28;
+            --brown-light: #b8845e;
+            --text: #2a1f1a;
+            --text-light: #5c4a3a;
+            --white: #ffffff;
+            --shadow: rgba(142, 84, 56, 0.12);
+            --espresso: #3d2e27;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            font-weight: 300;
+            color: var(--text);
+            background-color: var(--cream);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Bodoni Moda', 'Georgia', serif;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* ========== NAVIGATION ========== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 252, 244, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 1px 20px var(--shadow);
+            transition: all 0.4s ease;
+        }
+
+        .nav-logo {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 1.4rem;
+            letter-spacing: 0.08em;
+            color: var(--brown);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: currentColor;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .nav-hamburger span {
+            width: 24px;
+            height: 1.5px;
+            background: var(--text);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        /* ========== COURSE HERO ========== */
+        .course-hero {
+            padding: 160px 2rem 100px;
+            text-align: center;
+            background: var(--cream);
+        }
+
+        .course-hero .label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--brown-light);
+            margin-bottom: 1.2rem;
+        }
+
+        .course-hero h1 {
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            color: var(--brown);
+            margin-bottom: 1.5rem;
+        }
+
+        .course-hero .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.9;
+        }
+
+        .course-hero .course-meta {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .meta-item {
+            text-align: center;
+        }
+
+        .meta-item .meta-value {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 1.8rem;
+            color: var(--brown);
+        }
+
+        .meta-item .meta-label {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .divider {
+            width: 60px;
+            height: 1px;
+            background: var(--brown-light);
+            margin: 0 auto;
+        }
+
+        /* ========== COURSE INCLUDES ========== */
+        .course-includes {
+            padding: 80px 2rem;
+            background: var(--cream-dark);
+        }
+
+        .course-includes-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .course-includes h2 {
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            color: var(--brown);
+            margin-bottom: 3rem;
+        }
+
+        .includes-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
+        }
+
+        .include-item {
+            padding: 1.5rem 1rem;
+            background: var(--cream);
+            border: 1px solid rgba(142, 84, 56, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .include-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px var(--shadow);
+        }
+
+        .include-item h4 {
+            font-size: 0.95rem;
+            color: var(--brown);
+            line-height: 1.4;
+        }
+
+        /* ========== WEEK NAVIGATION ========== */
+        .week-nav {
+            position: sticky;
+            top: 60px;
+            z-index: 100;
+            background: rgba(255, 252, 244, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid rgba(142, 84, 56, 0.1);
+        }
+
+        .week-nav-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 0;
+        }
+
+        .week-tab {
+            padding: 0.8rem 2rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            cursor: pointer;
+            border: none;
+            background: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .week-tab::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--brown);
+            transition: width 0.3s ease;
+        }
+
+        .week-tab:hover {
+            color: var(--brown);
+        }
+
+        .week-tab.active {
+            color: var(--brown);
+            font-weight: 500;
+        }
+
+        .week-tab.active::after {
+            width: 60%;
+        }
+
+        /* ========== WEEK SECTIONS ========== */
+        .week-section {
+            padding: 80px 2rem;
+            display: none;
+        }
+
+        .week-section.active {
+            display: block;
+        }
+
+        .week-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .week-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .week-header .week-number {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 4rem;
+            color: var(--brown-light);
+            opacity: 0.3;
+            margin-bottom: -0.5rem;
+        }
+
+        .week-header h2 {
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            color: var(--brown);
+            margin-bottom: 0.8rem;
+        }
+
+        .week-header p {
+            font-size: 1rem;
+            color: var(--text-light);
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        /* ========== DAY CARDS ========== */
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .day-card {
+            background: var(--white);
+            border: 1px solid rgba(142, 84, 56, 0.08);
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .day-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 50px var(--shadow);
+            border-color: var(--brown-light);
+        }
+
+        .day-card-video {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            background: var(--cream-dark);
+            overflow: hidden;
+        }
+
+        .day-card-video .placeholder {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--cream-dark) 0%, #e8ddd0 100%);
+        }
+
+        .play-icon {
+            width: 50px;
+            height: 50px;
+            border: 2px solid var(--brown-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .day-card:hover .play-icon {
+            background: var(--brown);
+            border-color: var(--brown);
+        }
+
+        .play-icon::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 8px 0 8px 14px;
+            border-color: transparent transparent transparent var(--brown-light);
+            margin-left: 3px;
+            transition: border-color 0.3s ease;
+        }
+
+        .day-card:hover .play-icon::after {
+            border-color: transparent transparent transparent var(--cream);
+        }
+
+        .placeholder-text {
+            font-size: 0.75rem;
+            color: var(--brown-light);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .day-card-content {
+            padding: 1.5rem;
+        }
+
+        .day-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--brown-light);
+            margin-bottom: 0.4rem;
+        }
+
+        .day-card-content h3 {
+            font-size: 1.15rem;
+            color: var(--brown);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .day-card-content p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .day-card-content .duration {
+            font-size: 0.8rem;
+            color: var(--brown-light);
+            margin-top: 0.8rem;
+        }
+
+        /* ========== CTA ========== */
+        .course-cta {
+            padding: 100px 2rem;
+            text-align: center;
+            background: var(--espresso);
+        }
+
+        .course-cta .label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--brown-light);
+            margin-bottom: 1rem;
+        }
+
+        .course-cta h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--cream);
+            margin-bottom: 1.2rem;
+        }
+
+        .course-cta p {
+            font-size: 1.05rem;
+            color: rgba(255, 252, 244, 0.7);
+            max-width: 550px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.8;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: var(--brown);
+            color: var(--cream);
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: all 0.4s ease;
+        }
+
+        .cta-btn:hover {
+            background: var(--brown-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--text);
+            color: rgba(255, 252, 244, 0.6);
+            padding: 40px 2rem;
+            text-align: center;
+        }
+
+        .footer a {
+            color: rgba(255, 252, 244, 0.6);
+        }
+
+        .footer a:hover {
+            color: var(--cream);
+        }
+
+        .footer-inner {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer h3 {
+            font-size: 1.3rem;
+            color: var(--cream);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer p {
+            font-size: 0.85rem;
+            margin-bottom: 0.3rem;
+        }
+
+        /* ========== SCROLL REVEAL ========== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ========== PROGRESS SYSTEM ========== */
+        .course-progress {
+            padding: 1.5rem 2rem 0;
+            text-align: center;
+        }
+
+        .progress-bar-wrapper {
+            max-width: 400px;
+            margin: 0 auto 0.5rem;
+            background: var(--cream-dark);
+            border-radius: 20px;
+            height: 6px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: var(--brown);
+            border-radius: 20px;
+            transition: width 0.6s ease;
+            width: 0%;
+        }
+
+        .progress-text {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            letter-spacing: 0.05em;
+        }
+
+        .day-card.locked {
+            cursor: default;
+        }
+
+        .day-card.locked .day-card-video .placeholder {
+            background: linear-gradient(135deg, #ddd5ca 0%, #cec5b8 100%);
+        }
+
+        .day-card.locked .play-icon {
+            display: none;
+        }
+
+        .day-card.locked .placeholder-text {
+            display: none;
+        }
+
+        .day-card.locked .lock-overlay {
+            display: flex;
+        }
+
+        .day-card.locked .day-card-content {
+            opacity: 0.35;
+        }
+
+        .day-card.locked:hover {
+            transform: none;
+            box-shadow: none;
+            border-color: rgba(142, 84, 56, 0.08);
+        }
+
+        .lock-overlay {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .lock-symbol {
+            width: 28px;
+            height: 32px;
+            position: relative;
+        }
+
+        .lock-symbol::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 14px;
+            height: 11px;
+            border: 2px solid var(--brown-light);
+            border-bottom: none;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .lock-symbol::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 15px;
+            background: var(--brown-light);
+            border-radius: 3px;
+        }
+
+        .lock-overlay span {
+            font-size: 0.65rem;
+            color: var(--brown-light);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .complete-btn {
+            display: block;
+            width: 100%;
+            padding: 0.65rem;
+            margin-top: 1rem;
+            background: none;
+            border: 1.5px solid var(--brown);
+            color: var(--brown);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .complete-btn:hover {
+            background: var(--brown);
+            color: var(--cream);
+        }
+
+        .day-card.completed .complete-btn {
+            background: var(--brown);
+            color: var(--cream);
+            border-color: var(--brown);
+            cursor: default;
+        }
+
+        .day-card.completed .complete-btn:hover {
+            transform: none;
+        }
+
+        .day-card.locked .complete-btn {
+            display: none;
+        }
+
+        .week-tab.tab-pulse {
+            animation: tabPulse 1.5s ease;
+        }
+
+        @keyframes tabPulse {
+            0%, 100% { color: var(--text-light); }
+            50% { color: var(--brown); transform: scale(1.08); }
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 992px) {
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(42, 31, 26, 0.97);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links.active a {
+                color: var(--cream) !important;
+                font-size: 1.3rem;
+                padding: 0.5rem 0;
+            }
+
+            .nav-hamburger {
+                display: flex;
+            }
+
+            .nav-hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(4px, 4px);
+            }
+
+            .nav-hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .nav-hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(4px, -4px);
+            }
+
+            .includes-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .days-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .course-hero {
+                padding: 130px 1.5rem 70px;
+            }
+
+            .course-hero .course-meta {
+                gap: 1.5rem;
+            }
+
+            .course-includes {
+                padding: 60px 1.5rem;
+            }
+
+            .includes-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .week-tab {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.8rem;
+            }
+
+            .week-section {
+                padding: 60px 1.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav {
+                padding: 1rem 1.2rem;
+            }
+
+            .nav-logo {
+                font-size: 1.15rem;
+            }
+
+            .course-hero {
+                padding: 120px 1.2rem 60px;
+            }
+
+            .course-hero h1 {
+                font-size: clamp(1.8rem, 8vw, 2.4rem);
+            }
+
+            .course-hero .subtitle {
+                font-size: 0.95rem;
+            }
+
+            .meta-item .meta-value {
+                font-size: 1.4rem;
+            }
+
+            .course-includes {
+                padding: 50px 1.2rem;
+            }
+
+            .includes-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.8rem;
+            }
+
+            .include-item {
+                padding: 1rem 0.8rem;
+            }
+
+            .include-item h4 {
+                font-size: 0.85rem;
+            }
+
+            .week-nav {
+                top: 52px;
+                padding: 0.5rem 0.5rem;
+            }
+
+            .week-tab {
+                padding: 0.6rem 0.8rem;
+                font-size: 0.72rem;
+                letter-spacing: 0.05em;
+            }
+
+            .week-section {
+                padding: 50px 1.2rem;
+            }
+
+            .week-header .week-number {
+                font-size: 3rem;
+            }
+
+            .days-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .day-card-content {
+                padding: 1.2rem;
+            }
+
+            .course-cta {
+                padding: 70px 1.2rem;
+            }
+
+            .complete-btn {
+                padding: 0.55rem;
+                font-size: 0.68rem;
+            }
+
+            .course-progress {
+                padding: 1rem 1.2rem 0;
+            }
+
+            .lock-symbol {
+                width: 22px;
+                height: 26px;
+            }
+
+            .lock-symbol::before {
+                width: 11px;
+                height: 9px;
+            }
+
+            .lock-symbol::after {
+                width: 16px;
+                height: 12px;
+            }
+
+            .lock-overlay span {
+                font-size: 0.6rem;
+            }
+
+            .footer {
+                padding: 30px 1.2rem;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .week-tab {
+                padding: 0.5rem 0.6rem;
+                font-size: 0.68rem;
+            }
+
+            .includes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="nav" id="nav">
+        <a href="index.html" class="nav-logo">Rejuvinated Mother</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="courses.html">Course</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- ========== COURSE HERO ========== -->
+    <section class="course-hero">
+        <p class="label reveal">Online Course</p>
+        <h1 class="reveal">Post Natal Rejuvenation</h1>
+        <p class="subtitle reveal">A full month of holistic support designed for mothers ready to restore, rebuild, and come home to themselves. Your body has done extraordinary work &mdash; it deserves this.</p>
+        <div class="course-meta reveal">
+            <div class="meta-item">
+                <div class="meta-value">4</div>
+                <div class="meta-label">Weeks</div>
+            </div>
+            <div class="meta-item">
+                <div class="meta-value">28</div>
+                <div class="meta-label">Sessions</div>
+            </div>
+            <div class="meta-item">
+                <div class="meta-value">1</div>
+                <div class="meta-label">Month</div>
+            </div>
+        </div>
+        <div class="divider"></div>
+    </section>
+
+    <!-- ========== WHAT'S INCLUDED ========== -->
+    <section class="course-includes">
+        <div class="course-includes-inner">
+            <h2 class="reveal">What's Included</h2>
+            <div class="includes-grid">
+                <div class="include-item reveal">
+                    <h4>Naturopathic Nutrition</h4>
+                </div>
+                <div class="include-item reveal">
+                    <h4>Yoga</h4>
+                </div>
+                <div class="include-item reveal">
+                    <h4>Meditation</h4>
+                </div>
+                <div class="include-item reveal">
+                    <h4>Pilates</h4>
+                </div>
+                <div class="include-item reveal">
+                    <h4>And More</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WEEK NAVIGATION ========== -->
+    <div class="week-nav">
+        <div class="week-nav-inner">
+            <button class="week-tab active" data-week="1">Week 1</button>
+            <button class="week-tab" data-week="2">Week 2</button>
+            <button class="week-tab" data-week="3">Week 3</button>
+            <button class="week-tab" data-week="4">Week 4</button>
+        </div>
+    </div>
+
+    <!-- ========== WEEK 1 ========== -->
+    <section class="week-section active" id="week-1">
+        <div class="week-inner">
+            <div class="week-header reveal">
+                <div class="week-number">01</div>
+                <h2>Nourish &amp; Reset</h2>
+                <p>Laying the foundation. This week focuses on cleansing, nourishing your body, and beginning to restore depleted energy.</p>
+            </div>
+            <div class="days-grid">
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 1</div>
+                        <h3>Welcome &amp; Setting Intentions</h3>
+                        <p>An introduction to your rejuvenation journey. Setting the foundation for the month ahead.</p>
+                        <div class="duration">15-20 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 2</div>
+                        <h3>Nutrition Reset: The Basics</h3>
+                        <p>Understanding what your body needs right now. Simple, nourishing principles for postnatal recovery.</p>
+                        <div class="duration">20-25 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 3</div>
+                        <h3>Gentle Yoga: Reconnecting</h3>
+                        <p>A slow, nurturing yoga session designed to gently reconnect you with your body after birth.</p>
+                        <div class="duration">25-30 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 4</div>
+                        <h3>Guided Meditation: Rest</h3>
+                        <p>A calming meditation to help quieten the mind and invite deep, restorative rest.</p>
+                        <div class="duration">15 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 5</div>
+                        <h3>Healing Foods &amp; Recipes</h3>
+                        <p>Nourishing recipes and meal ideas specifically designed for postnatal recovery and energy.</p>
+                        <div class="duration">20 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 6</div>
+                        <h3>Pilates: Core Foundations</h3>
+                        <p>Gentle core reconnection exercises to begin rebuilding strength from the inside out.</p>
+                        <div class="duration">20-25 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 7</div>
+                        <h3>Week 1 Reflection</h3>
+                        <p>Reflecting on your first week. A guided journaling session and gentle yoga to close the week.</p>
+                        <div class="duration">20 min</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WEEK 2 ========== -->
+    <section class="week-section" id="week-2">
+        <div class="week-inner">
+            <div class="week-header reveal">
+                <div class="week-number">02</div>
+                <h2>Strengthen &amp; Balance</h2>
+                <p>Building on the foundation. This week deepens your practice and focuses on hormonal balance and inner strength.</p>
+            </div>
+            <div class="days-grid">
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 8</div>
+                        <h3>Hormonal Health &amp; Nutrition</h3>
+                        <p>How to support your hormonal balance naturally through the food you eat and the way you live.</p>
+                        <div class="duration">20-25 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 9</div>
+                        <h3>Yoga Flow: Building Strength</h3>
+                        <p>A slightly stronger yoga flow to build physical and emotional resilience.</p>
+                        <div class="duration">30 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 10</div>
+                        <h3>Meditation: Self-Compassion</h3>
+                        <p>A loving-kindness meditation to nurture your relationship with yourself.</p>
+                        <div class="duration">15-20 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 11</div>
+                        <h3>Digestive Health Deep Dive</h3>
+                        <p>Understanding your gut and how to heal it. Practical guidance for lasting digestive wellness.</p>
+                        <div class="duration">20 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 12</div>
+                        <h3>Pilates: Pelvic Floor Focus</h3>
+                        <p>Targeted exercises for pelvic floor recovery and core strengthening.</p>
+                        <div class="duration">25 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 13</div>
+                        <h3>Energy &amp; Sleep Restoration</h3>
+                        <p>Naturopathic approaches to reclaiming restful sleep and sustainable energy.</p>
+                        <div class="duration">20 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 14</div>
+                        <h3>Week 2 Reflection</h3>
+                        <p>Halfway through. A restorative yoga session and reflection on the changes you're feeling.</p>
+                        <div class="duration">20 min</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WEEK 3 ========== -->
+    <section class="week-section" id="week-3">
+        <div class="week-inner">
+            <div class="week-header reveal">
+                <div class="week-number">03</div>
+                <h2>Restore &amp; Reconnect</h2>
+                <p>Deepening the healing. This week is about emotional restoration and reconnecting with your sense of self.</p>
+            </div>
+            <div class="days-grid">
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 15</div>
+                        <h3>Emotional Wellbeing &amp; Motherhood</h3>
+                        <p>Exploring the emotional landscape of motherhood and tools for navigating it with grace.</p>
+                        <div class="duration">25 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 16</div>
+                        <h3>Yoga: Heart Opening Flow</h3>
+                        <p>A beautiful practice focused on opening the heart space and releasing stored tension.</p>
+                        <div class="duration">30 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 17</div>
+                        <h3>Meditation: Coming Home</h3>
+                        <p>A guided meditation on rediscovering yourself beneath the role of "mum."</p>
+                        <div class="duration">20 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 18</div>
+                        <h3>Skin, Hair &amp; Radiance</h3>
+                        <p>Naturopathic nutrition for outer radiance that reflects inner health and vitality.</p>
+                        <div class="duration">20 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 19</div>
+                        <h3>Pilates: Full Body Restore</h3>
+                        <p>A full-body pilates session to strengthen, lengthen, and restore.</p>
+                        <div class="duration">30 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 20</div>
+                        <h3>Body Confidence &amp; Acceptance</h3>
+                        <p>Finding peace with your body and learning to honour what it has created.</p>
+                        <div class="duration">20 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 21</div>
+                        <h3>Week 3 Reflection</h3>
+                        <p>Three weeks in. Celebrating your progress and setting intentions for the final week.</p>
+                        <div class="duration">15 min</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WEEK 4 ========== -->
+    <section class="week-section" id="week-4">
+        <div class="week-inner">
+            <div class="week-header reveal">
+                <div class="week-number">04</div>
+                <h2>Thrive &amp; Sustain</h2>
+                <p>Bringing it all together. This final week is about integration, sustainable practices, and stepping into your rejuvenated self.</p>
+            </div>
+            <div class="days-grid">
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 22</div>
+                        <h3>Sustainable Nutrition Habits</h3>
+                        <p>Building lasting habits. How to maintain nourishing nutrition beyond this course.</p>
+                        <div class="duration">20 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 23</div>
+                        <h3>Yoga: Empowerment Flow</h3>
+                        <p>A powerful, flowing yoga practice to embody the strength and confidence you've rebuilt.</p>
+                        <div class="duration">30 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 24</div>
+                        <h3>Meditation: Gratitude &amp; Grace</h3>
+                        <p>A beautiful gratitude meditation to honour your journey and everything your body has given you.</p>
+                        <div class="duration">15-20 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 25</div>
+                        <h3>Reducing Inflammation Naturally</h3>
+                        <p>Anti-inflammatory nutrition and lifestyle practices for long-term comfort and vitality.</p>
+                        <div class="duration">20 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 26</div>
+                        <h3>Pilates: Strength &amp; Flow</h3>
+                        <p>Your strongest pilates session yet. A celebration of how far your body has come.</p>
+                        <div class="duration">30 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 27</div>
+                        <h3>Relationships &amp; Self</h3>
+                        <p>Reconnecting with yourself and nurturing the relationships that matter most to you.</p>
+                        <div class="duration">20 min</div>
+                    </div>
+                </div>
+                <div class="day-card reveal">
+                    <div class="day-card-video">
+                        <div class="placeholder">
+                            <div class="play-icon"></div>
+                            <span class="placeholder-text">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="day-card-content">
+                        <div class="day-label">Day 28</div>
+                        <h3>Closing Ceremony</h3>
+                        <p>Celebrating your rejuvenation. A final yoga, meditation, and reflection to carry forward into your new chapter.</p>
+                        <div class="duration">30 min</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="course-cta">
+        <div class="reveal">
+            <p class="label">Coming Soon</p>
+            <h2>Be the First to Know</h2>
+            <p>This course is currently in development. To be notified the moment it launches, get in touch or follow along on social media.</p>
+            <a href="mailto:coaching@danielladeangelli.com?subject=Post Natal Rejuvenation Course" class="cta-btn">Notify Me</a>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <h3>Rejuvinated Mother</h3>
+            <p><a href="index.html">Back to Home</a></p>
+            <p>&copy; 2026 Rejuvinated Mother. All rights reserved. Made in Poole by <a href="https://gladetech.uk" target="_blank" rel="noopener">Glade Tech</a></p>
+        </div>
+    </footer>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script>
+        // Mobile menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            const isActive = hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            document.body.classList.toggle('menu-open', isActive);
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        });
+
+        // Week tabs
+        const tabs = document.querySelectorAll('.week-tab');
+        const sections = document.querySelectorAll('.week-section');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const week = tab.dataset.week;
+
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                sections.forEach(s => s.classList.remove('active'));
+                document.getElementById(`week-${week}`).classList.add('active');
+
+                // Re-trigger reveal animations for newly visible content
+                const newReveals = document.querySelectorAll(`#week-${week} .reveal`);
+                newReveals.forEach(el => {
+                    el.classList.remove('visible');
+                    setTimeout(() => revealObserver.observe(el), 50);
+                });
+
+                // Scroll to week content
+                const weekNav = document.querySelector('.week-nav');
+                const offset = weekNav.offsetTop + weekNav.offsetHeight;
+                window.scrollTo({ top: offset - 70, behavior: 'smooth' });
+            });
+        });
+
+        // Scroll reveal
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -30px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ========== COURSE PROGRESS SYSTEM ==========
+        const STORAGE_KEY = 'rm_course_progress';
+
+        function getProgress() {
+            try {
+                const data = localStorage.getItem(STORAGE_KEY);
+                return data ? JSON.parse(data) : { completedDays: [] };
+            } catch (e) {
+                return { completedDays: [] };
+            }
+        }
+
+        function saveProgress(progress) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+        }
+
+        function getHighestUnlockedDay(progress) {
+            if (progress.completedDays.length === 0) return 1;
+            return Math.max(...progress.completedDays) + 1;
+        }
+
+        // Auto-assign data-day attributes from day labels
+        document.querySelectorAll('.day-card').forEach(card => {
+            const dayLabel = card.querySelector('.day-label');
+            if (dayLabel) {
+                const match = dayLabel.textContent.match(/Day\s+(\d+)/);
+                if (match) card.dataset.day = match[1];
+            }
+        });
+
+        // Add lock overlays and complete buttons dynamically
+        document.querySelectorAll('.day-card[data-day]').forEach(card => {
+            const placeholder = card.querySelector('.placeholder');
+            if (placeholder) {
+                const lockOverlay = document.createElement('div');
+                lockOverlay.className = 'lock-overlay';
+                lockOverlay.innerHTML = '<div class="lock-symbol"></div><span>Complete previous day first</span>';
+                placeholder.appendChild(lockOverlay);
+            }
+
+            const btn = document.createElement('button');
+            btn.className = 'complete-btn';
+            btn.textContent = 'Mark Complete';
+            card.querySelector('.day-card-content').appendChild(btn);
+
+            btn.addEventListener('click', () => {
+                const day = parseInt(card.dataset.day);
+                const progress = getProgress();
+                if (!progress.completedDays.includes(day)) {
+                    progress.completedDays.push(day);
+                    saveProgress(progress);
+                    updateCardStates();
+
+                    // If next day is in the next week, pulse that tab
+                    const nextDay = day + 1;
+                    if (nextDay <= 28) {
+                        const currentWeek = Math.ceil(day / 7);
+                        const nextWeek = Math.ceil(nextDay / 7);
+                        if (nextWeek > currentWeek) {
+                            const nextTab = document.querySelector('.week-tab[data-week="' + nextWeek + '"]');
+                            if (nextTab) {
+                                nextTab.classList.add('tab-pulse');
+                                setTimeout(() => nextTab.classList.remove('tab-pulse'), 2000);
+                            }
+                        }
+                    }
+                }
+            });
+        });
+
+        // Add progress bar above week nav
+        const weekNav = document.querySelector('.week-nav');
+        if (weekNav) {
+            const progressEl = document.createElement('div');
+            progressEl.className = 'course-progress';
+            progressEl.innerHTML =
+                '<div class="progress-bar-wrapper">' +
+                    '<div class="progress-bar-fill" id="progressFill"></div>' +
+                '</div>' +
+                '<div class="progress-text" id="progressText">0 of 28 days completed</div>';
+            weekNav.parentNode.insertBefore(progressEl, weekNav);
+        }
+
+        function updateProgressBar(progress) {
+            const fill = document.getElementById('progressFill');
+            const text = document.getElementById('progressText');
+            if (fill && text) {
+                const count = progress.completedDays.length;
+                const pct = (count / 28) * 100;
+                fill.style.width = pct + '%';
+                if (count === 28) {
+                    text.textContent = 'Course complete!';
+                } else {
+                    text.textContent = count + ' of 28 days completed';
+                }
+            }
+        }
+
+        function updateCardStates() {
+            const progress = getProgress();
+            const highestUnlocked = getHighestUnlockedDay(progress);
+
+            document.querySelectorAll('.day-card[data-day]').forEach(card => {
+                const day = parseInt(card.dataset.day);
+                const btn = card.querySelector('.complete-btn');
+
+                card.classList.remove('locked', 'completed');
+
+                if (progress.completedDays.includes(day)) {
+                    card.classList.add('completed');
+                    if (btn) btn.innerHTML = '&#10003; Completed';
+                } else if (day > highestUnlocked) {
+                    card.classList.add('locked');
+                } else {
+                    if (btn) btn.textContent = 'Mark Complete';
+                }
+            });
+
+            updateProgressBar(progress);
+        }
+
+        // Initialise card states on load
+        updateCardStates();
+    </script>
+
+</body>
+</html>
