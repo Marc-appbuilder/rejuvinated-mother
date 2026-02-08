@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post Natal Rejuvenation Course | Rejuvinated Mother</title>
+    <meta name="description" content="A 28-day online post natal rejuvenation course — naturopathic nutrition, yoga, meditation and pilates designed to restore, rebuild and rejuvenate mothers after birth.">
+    <meta name="author" content="Danielle De Angelli">
+    <link rel="canonical" href="https://rejuvinatedmother.com/courses.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Post Natal Rejuvenation Course | Rejuvinated Mother">
+    <meta property="og:description" content="A 28-day online course for mothers — naturopathic nutrition, yoga, meditation and pilates to restore your energy, confidence and sense of self.">
+    <meta property="og:image" content="purple1.jpeg">
+    <meta property="og:url" content="https://rejuvinatedmother.com/courses.html">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Post Natal Rejuvenation Course | Rejuvinated Mother">
+    <meta name="twitter:description" content="A 28-day online course for mothers — nutrition, yoga, meditation and pilates for postnatal recovery.">
+    <meta name="twitter:image" content="purple1.jpeg">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -125,6 +143,9 @@
             gap: 5px;
             cursor: pointer;
             z-index: 1001;
+            background: none;
+            border: none;
+            padding: 0;
         }
 
         .nav-hamburger span {
@@ -930,11 +951,11 @@
             <li><a href="courses.html">Course</a></li>
             <li><a href="index.html#contact">Contact</a></li>
         </ul>
-        <div class="nav-hamburger" id="hamburger">
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
     </nav>
 
     <!-- ========== COURSE HERO ========== -->
@@ -961,7 +982,7 @@
 
     <!-- ========== IMAGE DIVIDER ========== -->
     <div class="course-divider-img">
-        <img src="purple1.jpeg" alt="Purple sky">
+        <img src="purple1.jpeg" alt="Purple sky" loading="lazy">
     </div>
 
     <!-- ========== WHAT'S INCLUDED ========== -->
@@ -1471,6 +1492,7 @@
             const isActive = hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
             document.body.classList.toggle('menu-open', isActive);
+            hamburger.setAttribute('aria-expanded', isActive);
         });
 
         navLinks.querySelectorAll('a').forEach(link => {
@@ -1478,6 +1500,7 @@
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
                 document.body.classList.remove('menu-open');
+                hamburger.setAttribute('aria-expanded', 'false');
             });
         });
 

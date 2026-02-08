@@ -3,7 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rejuvinated Mother</title>
+    <title>Rejuvinated Mother | Holistic Women's Health Coaching in Poole</title>
+    <meta name="description" content="Rejuvinated Mother offers holistic women's health coaching — nutritional therapy, yoga, meditation and relationship coaching for mothers. Based in Poole, sessions online via Zoom.">
+    <meta name="author" content="Danielle De Angelli">
+    <link rel="canonical" href="https://rejuvinatedmother.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rejuvinated Mother | Holistic Women's Health Coaching">
+    <meta property="og:description" content="Holistic support for mothers — nutritional therapy, yoga, meditation and relationship coaching. Reclaim your energy, confidence and sense of self.">
+    <meta property="og:image" content="grass-flower-sunset.png">
+    <meta property="og:url" content="https://rejuvinatedmother.com/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rejuvinated Mother | Holistic Women's Health Coaching">
+    <meta name="twitter:description" content="Holistic support for mothers — nutritional therapy, yoga, meditation and relationship coaching.">
+    <meta name="twitter:image" content="grass-flower-sunset.png">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -139,6 +157,9 @@
             gap: 5px;
             cursor: pointer;
             z-index: 1001;
+            background: none;
+            border: none;
+            padding: 0;
         }
 
         .nav-hamburger span {
@@ -1363,7 +1384,7 @@
 
     <!-- ========== NAVIGATION ========== -->
     <nav class="nav" id="nav">
-        <a href="#" class="nav-logo">Rejuvinated Mother</a>
+        <a href="index.html" class="nav-logo">Rejuvinated Mother</a>
         <ul class="nav-links" id="navLinks">
             <li><a href="#about">About</a></li>
             <li><a href="#help">What I Help With</a></li>
@@ -1372,11 +1393,11 @@
             <li><a href="#journey">My Journey</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="nav-hamburger" id="hamburger">
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
     </nav>
 
     <!-- ========== HERO ========== -->
@@ -1407,7 +1428,7 @@
     <!-- ========== ABOUT SECTION 1 ========== -->
     <section class="about-split" id="about">
         <div class="about-image reveal-left">
-            <img src="newish1.jpeg" alt="Portrait">
+            <img src="newish1.jpeg" alt="Portrait" loading="lazy">
         </div>
         <div class="about-text reveal-right">
             <h2>About Me</h2>
@@ -1427,7 +1448,7 @@
     <!-- ========== ABOUT SECTION 2 ========== -->
     <section class="about-split reverse">
         <div class="about-image reveal-right">
-            <img src="new1.jpeg" alt="Family moment">
+            <img src="new1.jpeg" alt="Family moment" loading="lazy">
         </div>
         <div class="about-text dark-bg reveal-left">
             <h2>The Deeper Work</h2>
@@ -1517,7 +1538,7 @@
             <p>With the right nourishment and environment, your body can do what it's meant to do. My role is to help you create those conditions. When there's less stress in the body and mind, more energy is freed up for healing, repair, and growth.</p>
         </div>
         <div class="philosophy-image reveal-right">
-            <img src="new2.jpeg" alt="Family at the beach">
+            <img src="new2.jpeg" alt="Family at the beach" loading="lazy">
         </div>
     </section>
 
@@ -1533,7 +1554,7 @@
     <!-- ========== ABOUT SECTION 3 ========== -->
     <section class="about-split">
         <div class="about-image reveal-left">
-            <img src="sunset2.jpeg" alt="Sunset over the sea">
+            <img src="sunset2.jpeg" alt="Sunset over the sea" loading="lazy">
         </div>
         <div class="about-text reveal-right">
             <h2>A Holistic Path</h2>
@@ -1626,16 +1647,16 @@
     <!-- ========== GALLERY STRIP ========== -->
     <div class="gallery-strip">
         <div class="gallery-item">
-            <img src="sunset2.jpeg" alt="Sunset colours">
+            <img src="sunset2.jpeg" alt="Sunset colours" loading="lazy">
         </div>
         <div class="gallery-item">
-            <img src="bwkids.jpeg" alt="By the sea">
+            <img src="bwkids.jpeg" alt="By the sea" loading="lazy">
         </div>
         <div class="gallery-item">
-            <img src="grass-flower-sunset.png" alt="Golden light">
+            <img src="grass-flower-sunset.png" alt="Golden light" loading="lazy">
         </div>
         <div class="gallery-item">
-            <img src="purple1.jpeg" alt="Purple sunset">
+            <img src="purple1.jpeg" alt="Purple sunset" loading="lazy">
         </div>
     </div>
 
@@ -1709,6 +1730,7 @@
             const isActive = hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
             document.body.classList.toggle('menu-open', isActive);
+            hamburger.setAttribute('aria-expanded', isActive);
         });
 
         navLinks.querySelectorAll('a').forEach(link => {
@@ -1716,6 +1738,7 @@
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
                 document.body.classList.remove('menu-open');
+                hamburger.setAttribute('aria-expanded', 'false');
             });
         });
 
